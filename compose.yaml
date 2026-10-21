@@ -1,0 +1,16 @@
+services:
+  notes:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      PUBLIC_ACCESS_ENABLED: "false"
+      COOKIE_SECURE: "false"
+      SEED_DEMO: "true"
+    volumes:
+      - notes-data:/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  notes-data:
