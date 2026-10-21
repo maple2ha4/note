@@ -1,0 +1,1 @@
+CREATE TABLE app_meta (meta_key VARCHAR(100) PRIMARY KEY, meta_value VARCHAR(1000) NOT NULL);
